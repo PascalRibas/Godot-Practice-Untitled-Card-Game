@@ -1,0 +1,7 @@
+- Every Card has a Play Condition, e.g. Play: Instant(/ from hand), Play: from hand by sacrificing 1, Play: from Pile (== Discard Pile) by sacrificing 1,... (word play colored green?)
+- Can discard cards from hand whenever, this increases "Discard Counter", used for excample as "Play: from deck by decreasing DC by 2", "Play: from hand while DC is 3+", "Play: from Pile while DC is 2+",...
+- 100 Life Points each, start with 6 cards in hand, can mulligan up to 3 at start of game by paying 3 0 Life Points each, draw 1 card (or 2 idk yet) every turn (probably except the first)
+- Each creature card only has one value: Attack; excess dmg dealt to opponents LP; only Attack directly while opponents board is empty
+- No Damage to yourself from battle on your turn and opposing creatures ATK is decreased when a weaker creature runs into it ? (as in some kind of exhaustion feature)
+- Speed Spells (maybe calling Spells "Tools") can be used on opps turn, including first turn (maybe have some of em have a trigger effect, like trap cards)
+
