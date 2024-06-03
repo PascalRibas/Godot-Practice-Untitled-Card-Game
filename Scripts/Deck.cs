@@ -11,11 +11,11 @@ public partial class Deck : Node
 	}
 	private List<Card> deckList = new List<Card>(30);
 	//stuff for later
-	private static Random rng = new Random();  
+	private static Random rng = new Random();
 
 	public static void Shuffle<Card>(List<Card> list)  
 	{
-		int n = list.Count;  
+		int n = list.Count;
 		while (n > 1)
 		{  
 			n--;  
