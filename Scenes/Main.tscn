@@ -1,0 +1,26 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0wr3iecnyo62"]
+
+[ext_resource type="Script" path="res://Scripts/Main.cs" id="1_4dh84"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_4dh84")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="LifeP1" type="Label" parent="."]
+offset_left = 470.0
+offset_top = 282.0
+offset_right = 558.0
+offset_bottom = 305.0
+text = "Life P1: 100"
+
+[node name="LifeP2" type="Label" parent="."]
+offset_left = 461.0
+offset_top = 10.0
+offset_right = 558.0
+offset_bottom = 33.0
+text = "Life P2: 100"
+
+[node name="CardOnFieldTest" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CardOnFieldTest"]
