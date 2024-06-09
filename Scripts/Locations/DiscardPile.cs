@@ -7,9 +7,10 @@ namespace UntitledCardGame.Scripts.Locations
 {
     public class DiscardPile
     {
+        private List<Card> DiscardedCards;
         public List<Card> GetCards()
         {
-            
+            return this.DiscardedCards;
         }
     }
 }
