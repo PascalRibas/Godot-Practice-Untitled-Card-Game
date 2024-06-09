@@ -1,14 +1,15 @@
 using System;
 using Godot;
+using UntitledCardGame.Scripts;
 
 public abstract class Card
 {
 	private String name;
 	private String cardType;
-
 	private PlayCondition playCondition;
-
 	private OnPlayEffect onPlayEffect;
+    private CardLocation currentLocation;
+    private Player owner;
 
 	public Card(String name, String cardType, PlayCondition playCondition, OnPlayEffect onPlayEffect)
 	{
@@ -28,6 +29,20 @@ public abstract class Card
 		return this.cardType;
     }
 
+    public CardLocation GetCurrentLocation()
+    {
+        return this.currentLocation;
+    }
+
+    public void SetLocation(CardLocation location)
+    {
+        this.currentLocation = location;
+    }
+
+    public PlayCondition GetPlayConditionAsObject()
+    {
+        return this.playCondition;
+    }
     public String GetPlayConditionInWords()
     {
         return playCondition.PrintData();
@@ -36,6 +51,16 @@ public abstract class Card
     public String GetOnPlayEffectInWords()
     {
         return onPlayEffect.EffectInWords();
+    }
+
+    public Player GetOwner()
+    {
+        return this.owner;
+    }
+
+    public void setOwner(Player owner)
+    {
+        this.owner = owner;
     }
 
     public abstract int GetPower();

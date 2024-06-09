@@ -1,17 +1,18 @@
 using Godot;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public partial class Deck : Node
 {
-	public override void _Ready()
-	{
-		FillDeck();
-		PrintDeck();
-	}
 	private List<Card> deckList = new List<Card>(30);
 	//stuff for later
 	private static Random rng = new Random();
+
+	public Deck(List<Card> deckList)
+	{
+		this.deckList = deckList;
+	}
 
 	public static void Shuffle<Card>(List<Card> list)  
 	{
@@ -26,6 +27,8 @@ public partial class Deck : Node
 		}
 	}
 
+	/*
+	Test Function, TODO move somewhere else
 	public void FillDeck()
 	{
 		OnPlayEffect onPlayEffect = new TestCard();
@@ -35,7 +38,7 @@ public partial class Deck : Node
 			deckList.Add(new Spell("Basic Spell", false, new PlayCondition(), onPlayEffect));
 			deckList.Add(new Spell("Basic QPSpell", true, new PlayCondition(), onPlayEffect));
 		}
-	}
+	}*/
 
 	public void PrintDeck()
 	{
@@ -47,5 +50,22 @@ public partial class Deck : Node
 			if(cardType == "Creature") GD.Print(card.GetPower());
 			else if(cardType == "Spell") GD.Print(card.CheckIfQuickPlay());
 		}
+	}
+
+	public List<Card> ListContents()
+	{
+		return deckList;
+	}
+
+	public void MoveCardOut (Card card)
+	{
+		this.deckList.Remove(card);
+	}
+
+	public Card pop ()
+	{
+		Card card = deckList.ElementAt<Card>(0);
+		MoveCardOut(card);
+		return card;
 	}
 }

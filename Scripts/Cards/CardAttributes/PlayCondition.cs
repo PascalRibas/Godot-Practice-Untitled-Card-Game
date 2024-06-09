@@ -19,6 +19,21 @@ public class PlayCondition
 		this.fromWhere = fromWhere;
 	}
 
+	public int getDiscardCounter()
+	{
+		return this.discardCounter;
+	}
+
+	public int getSacrificeCounter()
+	{
+		return this.sacrificeCounter;
+	}
+
+	public CardLocation getFromWhere()
+	{
+		return fromWhere;
+	}
+
 	public String PrintData()
 	{
 		return "";
