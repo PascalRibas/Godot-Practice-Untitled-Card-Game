@@ -4,7 +4,6 @@ Current status (24.05.2024): Has the groundwork needed for the object-oriented d
 
 TODO: 
 
-- Moving cards around, combat, improve effect functionality
+- Combat, improve effect functionality
 - The front-end as a whole
-- Properly sort everything into folders
 - Design cards
