@@ -1,6 +1,7 @@
 using System;
 using Godot;
 using UntitledCardGame.Scripts;
+using UntitledCardGame.Scripts.Locations;
 
 public abstract class Card
 {

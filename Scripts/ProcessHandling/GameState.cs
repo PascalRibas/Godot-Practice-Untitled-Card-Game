@@ -64,7 +64,7 @@ namespace UntitledCardGame.Scripts
                 }
             }
 
-            foreach (Card card in this.decks[0].ListContents())
+            foreach (Card card in this.decks[0].GetCards())
             {
                 if(PlayCard.IsCardPlayable(card))
                 {
@@ -72,7 +72,7 @@ namespace UntitledCardGame.Scripts
                 }
             }
 
-            foreach (Card card in this.decks[1].ListContents())
+            foreach (Card card in this.decks[1].GetCards())
             {
                 if(PlayCard.IsCardPlayable(card))
                 {

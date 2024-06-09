@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public partial class Deck : Node
+public partial class Deck : Node, UntitledCardGame.Scripts.Locations.CardLocation
 {
 	private List<Card> deckList = new List<Card>(30);
 	//stuff for later
@@ -52,20 +52,25 @@ public partial class Deck : Node
 		}
 	}
 
-	public List<Card> ListContents()
+	public List<Card> GetCards()
 	{
 		return deckList;
 	}
 
-	public void MoveCardOut (Card card)
+	public void Remove (Card card)
 	{
 		this.deckList.Remove(card);
+	}
+
+	public void Add (Card card)
+	{
+		this.deckList.Add(card);
 	}
 
 	public Card pop ()
 	{
 		Card card = deckList.ElementAt<Card>(0);
-		MoveCardOut(card);
+		Remove(card);
 		return card;
 	}
 }

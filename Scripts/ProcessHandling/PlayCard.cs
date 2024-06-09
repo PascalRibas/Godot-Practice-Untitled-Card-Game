@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 using System.Xml.Serialization;
 using UntitledCardGame.Scripts.ProcessHandling;
 using UntitledCardGame.Scripts;
+using UntitledCardGame.Scripts.Locations;
 
 
-    //list of static functions related to using cards
+//only used for one function anymore, TODO move that function elsewhere and delete this
 public class PlayCard
 {
     //check this on every card each time the GameState updates
@@ -32,10 +33,5 @@ public class PlayCard
         }
 
         return true;
-    }
-    public static void CardToField(Card card)
-    {
-        card.SetLocation(CardLocation.Field);
-        GameHandler.GetGameState().Update();
     }
 }

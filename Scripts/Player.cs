@@ -12,8 +12,20 @@ namespace UntitledCardGame.Scripts
         private int CurrentSacrificeCounter;
         private Hand hand;
         private DiscardPile pile;
+        private Field field;
         private List<Card> deckList;
         private int playerNumber;
+
+        public Player(List<Card> deckList, int playerNumber)
+        {
+            this.deckList = deckList;
+            hand = new Hand();
+            pile = new DiscardPile();
+            field = new Field();
+            this.playerNumber = playerNumber;
+            CurrentDiscardCounter = 0;
+            CurrentSacrificeCounter = 0;
+        }
 
         public int GetCurrentDiscardCounter()
         {
@@ -30,9 +42,19 @@ namespace UntitledCardGame.Scripts
             this.CurrentDiscardCounter = NewDiscardCounter;
         }
 
+        public void IncrementDiscardCounter()
+        {
+            CurrentDiscardCounter++;
+        }
+
         public void SetCurrentSacrificeCounter(int NewSacrificeCounter)
         {
             this.CurrentSacrificeCounter = NewSacrificeCounter;
+        }
+
+        public void IncrementSacrificeCounter()
+        {
+            CurrentSacrificeCounter++;
         }
 
         public DiscardPile GetDiscardPile()
@@ -43,6 +65,11 @@ namespace UntitledCardGame.Scripts
         public Hand GetHand()
         {
             return this.hand;
+        }
+
+        public Field GetField()
+        {
+            return this.field;
         }
 
         public List<Card> GetDeckList()

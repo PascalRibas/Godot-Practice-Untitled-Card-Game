@@ -1,9 +1,10 @@
 using System;
 using System.Security.Cryptography.X509Certificates;
+using UntitledCardGame.Scripts.Locations;
 
 public class PlayCondition
 {
-	private CardLocation fromWhere = CardLocation.Hand;
+	private CardLocation fromWhere = new Hand();
 	private int sacrificeCounter = 0;
 	private int discardCounter = 0;
 

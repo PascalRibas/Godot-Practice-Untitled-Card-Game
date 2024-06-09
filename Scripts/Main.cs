@@ -14,10 +14,3 @@ public partial class Main : Node
 	}
 }
 
-public enum CardLocation
-{
-	Field,
-	Hand,
-	Pile
-}
-
