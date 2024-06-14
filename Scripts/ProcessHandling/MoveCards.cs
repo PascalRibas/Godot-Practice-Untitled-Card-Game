@@ -1,4 +1,5 @@
 using MatchNecessities;
+using Godot;
 
 namespace ProcessHandling
 {
@@ -25,6 +26,7 @@ namespace ProcessHandling
             GameState gameState = ProcessHandling.GameHandler.GetGameState();
             Card drawnCard = gameState.GetDeck(player).pop();
             player.GetHand().Add(drawnCard);
+            GD.PrintErr("Player " + player.GetPlayerNumber() + " drew " + drawnCard.PrintData());
         }
 
         //probably made obsolete by MoveCard

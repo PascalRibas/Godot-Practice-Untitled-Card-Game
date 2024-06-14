@@ -15,10 +15,10 @@ namespace Cards.CardTypes
             throw new Exception("Can't check power on spell");
         }
 
-        /*public override String PrintData()
+        public override String PrintData()
         {
             return "Card Type: " + GetCardType() + "\n Name: " + GetName() +
             "\n Play Condition: " +  GetPlayConditionInWords() + "\n Effect on Play: " + GetOnPlayEffectInWords();
-        }*/
+        }
     }
 }

@@ -21,11 +21,11 @@ namespace Cards.CardTypes
             this.power = power;
         }
 
-        /*public override String PrintData()
+        public override String PrintData()
         {
             return "Card Type: " + GetCardType() + "\n Name: " + GetName() +
             "\n Play Condition: " +  GetPlayConditionInWords() + "\n Effect on Play: " + GetOnPlayEffectInWords()
             + "\n Power of Creature: " + GetPower();
-        }*/
+        }
     }
 }

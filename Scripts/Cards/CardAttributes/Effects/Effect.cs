@@ -9,6 +9,7 @@ namespace Effects
     public interface Effect
     {
         public void ApplyEffect(Player player);
+        public String EffectInWords();
     }
 
     //this doesn't really work, TODO find a better way of carrying over values (or just do it with custom effects)

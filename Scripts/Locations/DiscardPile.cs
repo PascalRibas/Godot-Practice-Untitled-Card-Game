@@ -5,6 +5,12 @@ namespace Locations
     public class DiscardPile : CardLocation
     {
         private List<Card> DiscardedCards;
+
+        public DiscardPile ()
+        {
+            DiscardedCards = new List<Card>();
+        }
+
         public List<Card> GetCards()
         {
             return this.DiscardedCards;

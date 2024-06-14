@@ -4,23 +4,29 @@ using Cards;
 
 namespace Locations
 {
-    public class Hand : CardLocation
-    {
-        private List<Card> HandCards;
-        private Player player;
-        public void Add(Card card)
-        {
-            HandCards.Add(card);
-        }
+	public class Hand : CardLocation
+	{
+		private List<Card> HandCards;
+		//private Player player;
+		
+		public Hand ()
+		{
+			HandCards = new List<Card>();
+		}
+		
+		public void Add(Card card)
+		{
+			HandCards.Add(card);
+		}
 
-        public void Remove(Card card)
-        {
-            HandCards.Remove(card);
-        }
+		public void Remove(Card card)
+		{
+			HandCards.Remove(card);
+		}
 
-        public List<Card> GetCards()
-        {
-            return this.HandCards;
-        }
-    }
+		public List<Card> GetCards()
+		{
+			return this.HandCards;
+		}
+	}
 }

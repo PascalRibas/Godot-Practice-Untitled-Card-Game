@@ -52,10 +52,10 @@ public abstract class Card
         return playCondition.PrintData();
     }
 
-    /*public String GetOnPlayEffectInWords()
+    public String GetOnPlayEffectInWords()
     {
         return onPlayEffect.EffectInWords();
-    }*/
+    }
 
     public Player GetOwner()
     {
@@ -74,6 +74,6 @@ public abstract class Card
 
     public abstract int GetPower();
 
-    //public abstract String PrintData();
+    public abstract String PrintData();
 
 }

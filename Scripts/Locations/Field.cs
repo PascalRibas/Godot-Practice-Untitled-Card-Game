@@ -6,7 +6,13 @@ namespace Locations
     public class Field : CardLocation
     {
         private List<Card> FieldCards;
-        private Player player;
+        //private Player player;
+
+        public Field ()
+        {
+            FieldCards = new List<Card>();
+        }
+
         public void Add(Card card)
         {
             FieldCards.Add(card);

@@ -10,7 +10,7 @@ namespace Cards
     */
     public class ListOfAllCards
     {
-        public List<Card> BaseCards = new List<Card>
+        public static readonly List<Card> BaseCards = new List<Card>
         {
           new Creature
           (
