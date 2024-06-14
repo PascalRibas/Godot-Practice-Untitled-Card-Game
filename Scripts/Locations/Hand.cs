@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using MatchNecessities;
 using Cards;
+using System.Runtime.CompilerServices;
+using System.Linq;
 
 namespace Locations
 {
@@ -27,6 +29,11 @@ namespace Locations
 		public List<Card> GetCards()
 		{
 			return this.HandCards;
+		}
+
+		public void PlayByInt (int input)
+		{
+			PlayCard.Play(HandCards.ElementAt(input-1));
 		}
 	}
 }

@@ -21,11 +21,11 @@ namespace Effects.PremadeEffects
 
     class PopAnyCreature : Effect
     {
-        public void ApplyEffect(Player player)
+        public async void ApplyEffect(Player player)
         {
             GameState gameState = ProcessHandling.GameHandler.GetGameState();
             CardLocation enemyField = gameState.GetOpponent(player).GetField();
-            Creature target = Placeholder.AwaitTarget(player, enemyField);
+            Creature target = await Placeholder.AwaitTarget(player, enemyField);
             Combat.Destroy(target);
         }
 
@@ -37,11 +37,11 @@ namespace Effects.PremadeEffects
 
     class LowerAttackBy : EffectWithIntValue
     {
-        public void ApplyEffect(Player player, int amount)
+        public async void ApplyEffect(Player player, int amount)
         {
             GameState gameState = ProcessHandling.GameHandler.GetGameState();
             CardLocation enemyField = gameState.GetOpponent(player).GetField();
-            Creature target = Placeholder.AwaitTarget(player, enemyField);
+            Creature target = await Placeholder.AwaitTarget(player, enemyField);
             target.SetPower(target.GetPower() - amount);
         }
 
@@ -53,9 +53,9 @@ namespace Effects.PremadeEffects
 
     class AddCreatureFromDiscarded : Effect
     {
-        public void ApplyEffect(Player player)
+        public async void ApplyEffect(Player player)
         {
-            Creature target = Placeholder.AwaitTarget(player, player.GetDiscardPile());
+            Creature target = await Placeholder.AwaitTarget(player, player.GetDiscardPile());
             ProcessHandling.MoveCards.MoveCard(target, player.GetHand());
         }
 

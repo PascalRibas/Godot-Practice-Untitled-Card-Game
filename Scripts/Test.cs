@@ -5,6 +5,8 @@ using Cards.CardTypes;
 using Godot;
 using MatchNecessities;
 using Locations;
+using System.Threading.Tasks;
+using System.Reflection.Metadata;
 
 public class Test
 {
@@ -27,18 +29,14 @@ public class Test
 
         ProcessHandling.GameHandler.StartMatch(player1, player2);
 
-        Console.WriteLine("Input number from 1 to 5:");
-        int input = Console.ReadLine().ToInt();
-        Hand hand = player1.GetHand();
-        List<Card> HandList = hand.GetCards();
-        PlayCard.Play(HandList.ElementAt(input-1));
+        GD.Print("Input number from 1 to 5:");
     }
 }
 
 public class Placeholder
 {
     
-    public static Creature AwaitTarget (Player player, CardLocation cardLocation)
+    public static async Task<Creature> AwaitTarget (Player player, CardLocation cardLocation)
     {
         List<Card> cards = cardLocation.GetCards();
         int size = cards.Capacity;
@@ -48,9 +46,10 @@ public class Placeholder
             throw new System.Exception();
         }
 
-        Console.WriteLine("Input number from 1 to " + size);
+        GD.Print("Input target number from 1 to " + size + ":");
 
-        int input = Console.ReadLine().ToInt();
+        Task<int> task = Main.HandleTargeting();
+        int input = await task;
 
         return (Creature)cards.ElementAt(input-1);
     }

@@ -85,6 +85,12 @@ namespace ProcessHandling
 			return decks[player.GetPlayerNumber()];
 		}
 
+		public Player GetPlayer (int number)
+		{
+			if(number == 0) return player1;
+			return player2;
+		}
+
 		public Player GetOpponent(Player player)
 		{
 			if (player.Equals(player1))
