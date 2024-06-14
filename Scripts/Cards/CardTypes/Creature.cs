@@ -16,6 +16,11 @@ namespace Cards.CardTypes
             return this.power;
         }
 
+        public void SetPower(int power)
+        {
+            this.power = power;
+        }
+
         /*public override String PrintData()
         {
             return "Card Type: " + GetCardType() + "\n Name: " + GetName() +

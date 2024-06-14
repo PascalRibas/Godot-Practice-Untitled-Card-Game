@@ -10,4 +10,10 @@ namespace Effects
     {
         public void ApplyEffect(Player player);
     }
+
+    //this doesn't really work, TODO find a better way of carrying over values (or just do it with custom effects)
+    interface EffectWithIntValue
+    {
+        public void ApplyEffect(Player player, int amount);
+    }
 }

@@ -10,9 +10,8 @@ namespace Cards
     */
     public class ListOfAllCards
     {
-        private const List<Card> BaseCards =
-        new List<Card>
-        [
+        public List<Card> BaseCards = new List<Card>
+        {
           new Creature
           (
             //Name:
@@ -32,8 +31,19 @@ namespace Cards
             //PlayCondition:
             new PlayCondition(),
             //Effect:
-            PremadeEffects.Draw1()
+            new Draw1()
+          ),
+
+          new Spell
+          (
+            //Name:
+            "TestSpell",
+            //PlayCondition:
+            new PlayCondition(),
+            //Effect:
+            new PopAnyCreature()
           )
-        ];
+        };
+
     }
 }

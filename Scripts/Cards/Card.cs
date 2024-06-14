@@ -67,6 +67,11 @@ public abstract class Card
         this.owner = owner;
     }
 
+    public void ApplyEffect()
+    {
+        onPlayEffect.ApplyEffect(owner);
+    }
+
     public abstract int GetPower();
 
     //public abstract String PrintData();

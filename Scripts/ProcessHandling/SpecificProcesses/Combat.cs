@@ -1,3 +1,7 @@
+using Cards.CardTypes;
+using System.Collections.Generic;
+
+
 //a collection of methods revolving around the combat step
 public class Combat
 {
@@ -27,8 +31,8 @@ public class Combat
 
     public static void PlanAttack(Creature attacker, Creature defender)
     {
-        Attack attack = new Attack(attacker, defender)
-      PlanAttack(attack);
+        Attack attack = new Attack(attacker, defender);
+        PlanAttack(attack);
     }
 
     public static void PlanAttack(Attack attack)

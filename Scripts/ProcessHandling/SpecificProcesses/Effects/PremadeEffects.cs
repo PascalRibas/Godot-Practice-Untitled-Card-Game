@@ -20,18 +20,18 @@ namespace Effects.PremadeEffects
         {
             GameState gameState = ProcessHandling.GameHandler.GetGameState();
             CardLocation enemyField = gameState.GetOpponent(player).GetField();
-            Creature target = AwaitTarget(player, enemyField);
+            Creature target = Placeholder.AwaitTarget(player, enemyField);
             Combat.Destroy(target);
         }
     }
 
-    class LowerAttackBy : Effect
+    class LowerAttackBy : EffectWithIntValue
     {
         public void ApplyEffect(Player player, int amount)
         {
             GameState gameState = ProcessHandling.GameHandler.GetGameState();
             CardLocation enemyField = gameState.GetOpponent(player).GetField();
-            Creature target = AwaitTarget(player, enemyField);
+            Creature target = Placeholder.AwaitTarget(player, enemyField);
             target.SetPower(target.GetPower() - amount);
         }
     }
@@ -40,9 +40,17 @@ namespace Effects.PremadeEffects
     {
         public void ApplyEffect(Player player)
         {
-            Creature target = AwaitTarget(player, player.GetDiscardPile());
+            Creature target = Placeholder.AwaitTarget(player, player.GetDiscardPile());
             ProcessHandling.MoveCards.MoveCard(target, player.GetHand());
         }
     }
 
+    class Placeholder
+    {
+        //placeholder function so the program doesn't crash
+        public static Creature AwaitTarget (Player player, CardLocation cardLocation)
+        {
+            return new Creature("NotYetImplemented", new PlayCondition(), new Draw1(), 0);
+        }
+    }
 }

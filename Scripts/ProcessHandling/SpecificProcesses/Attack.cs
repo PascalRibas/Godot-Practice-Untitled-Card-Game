@@ -1,9 +1,11 @@
+using Cards.CardTypes;
+
 public class Attack
 {
     private Creature attacker;
     private Creature defender;
 
-    public Attack(attacker, defender)
+    public Attack(Creature attacker, Creature defender)
     {
         this.attacker = attacker;
         this.defender = defender;
