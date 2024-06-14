@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace UntitledCardGame.Scripts.Cards
+namespace Cards
 {
     /*
     Early Implementation of Cards using a class that simply lists them all.
@@ -11,6 +11,19 @@ namespace UntitledCardGame.Scripts.Cards
     */
     public class ListOfAllCards
     {
-        
+      private const List<Card> BaseCards = 
+      {
+        new Creature
+        (
+          //Name:
+          "TestCreature",
+          //Power:
+          5,
+          //PlayCondition:
+          new PlayCondition(),
+          //Effect:
+          PremadeEffects.Draw1()
+        )
+      };
     }
 }
