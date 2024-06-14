@@ -13,6 +13,11 @@ namespace UntitledCardGame.Scripts.ProcessHandling
             currentGameState = new GameState();
             currentGameState.StartGame(You, AI);
         }
+        
+        public static void UpdateGameState(GameState nextGameState)
+        {
+          currentGameState = nextGameState;
+        }
 
         public static GameState GetGameState()
         {
