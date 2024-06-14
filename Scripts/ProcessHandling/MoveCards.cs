@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using UntitledCardGame.Scripts.Locations;
 
-namespace UntitledCardGame.Scripts.ProcessHandling
+namespace ProcessHandling
 {
     public class MoveCards
     {
