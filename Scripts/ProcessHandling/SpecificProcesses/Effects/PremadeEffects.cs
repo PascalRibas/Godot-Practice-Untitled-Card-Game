@@ -25,7 +25,10 @@ namespace Effects
     
     public static void LowerAttackBy (Player player, int amount)
     {
-      
+      GameState gameState = ProcessHandling.GameHandler.GetGameState();
+      CardLocation enemyField = gameState.GetOpponent(player).GetField();
+      Creature target = AwaitTarget(player, enemyField);
+      target.SetPower(target.GetPower()-amount);
     }
   }
 }
