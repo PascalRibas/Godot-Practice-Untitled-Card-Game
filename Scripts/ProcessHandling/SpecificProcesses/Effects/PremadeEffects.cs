@@ -8,5 +8,10 @@ namespace Effects
     {
       ProcessHandling.MoveCards.DrawCardFromDeck(player);
     }
+    
+    public static void PopAnyCreature(Player player)
+    {
+      
+    }
   }
 }
