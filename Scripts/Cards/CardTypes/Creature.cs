@@ -1,3 +1,4 @@
+//might roll back to multi-level inheritance instead
 public interface Creature
 {
   public String GetCardType()
