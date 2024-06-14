@@ -24,5 +24,10 @@ public class Combat
     }
   }
   
+  public static void PlanAttack(Attack attack)
+  {
+    plannedAttacks.Add(attack);
+  }
+  
   
 }
