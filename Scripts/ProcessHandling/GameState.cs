@@ -4,7 +4,7 @@ namespace ProcessHandling
 {
 	public class GameState
 	{
-		const int HAND_SIZE = 4;
+		const int HAND_SIZE = 5;
 		private Deck[] decks;
 		private Player player1;
 		private Player player2;
@@ -13,6 +13,9 @@ namespace ProcessHandling
 			this.player1 = player1;
 			this.player2 = player2;
 			decks = new Deck[] { new Deck(player1.GetDeckList()), new Deck(player2.GetDeckList()) };
+
+			decks[0].Shuffle();
+			decks[1].Shuffle();
 
 			for (int i = 0; i < HAND_SIZE; i++)
 			{

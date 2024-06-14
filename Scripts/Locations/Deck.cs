@@ -14,16 +14,16 @@ public partial class Deck : Node, CardLocation
         this.deckList = deckList;
     }
 
-    public static void Shuffle<Card>(List<Card> list)
+    public void Shuffle()
     {
-        int n = list.Count;
+        int n = deckList.Count;
         while (n > 1)
         {
             n--;
             int k = rng.Next(n + 1);
-            Card value = list[k];
-            list[k] = list[n];
-            list[n] = value;
+            Card value = deckList[k];
+            deckList[k] = deckList[n];
+            deckList[n] = value;
         }
     }
 
@@ -44,10 +44,11 @@ public partial class Deck : Node, CardLocation
     {
         foreach (Card card in deckList)
         {
-            String cardType = card.GetCardType();
+            GD.Print(card.PrintData());
+            /*String cardType = card.GetCardType();
             GD.Print(card.GetName());
             GD.Print(cardType);
-            if (cardType == "Creature") GD.Print(card.GetPower());
+            if (cardType == "Creature") GD.Print(card.GetPower());*/
         }
     }
 

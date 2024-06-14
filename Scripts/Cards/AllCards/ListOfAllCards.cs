@@ -24,6 +24,18 @@ namespace Cards
             5
           ),
 
+          new Creature
+          (
+            //Name:
+            "TestCreature2",
+            //PlayCondition:
+            new PlayCondition(),
+            //Effect:
+            new AddCreatureFromDiscarded(),
+            //Power:
+            2
+          ),
+
           new Spell
           (
             //Name:
@@ -37,7 +49,7 @@ namespace Cards
           new Spell
           (
             //Name:
-            "TestSpell",
+            "TestSpeedSpell",
             //PlayCondition:
             new PlayCondition(),
             //Effect:

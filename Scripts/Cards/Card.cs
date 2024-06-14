@@ -30,7 +30,7 @@ public abstract class Card
 
     public String GetCardType()
     {
-        return "";
+        return this.cardType;
     }
 
     public CardLocation GetCurrentLocation()

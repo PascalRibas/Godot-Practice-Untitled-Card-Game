@@ -12,7 +12,7 @@ public class Test
     {
         Decklist = new List<Card>();
 
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < 6; i++)
         {
             foreach(Card card in Cards.ListOfAllCards.BaseCards)
             {

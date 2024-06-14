@@ -17,6 +17,7 @@ namespace ProcessHandling
         public static void DrawCardFromDeck(Player player, GameState gameState)
         {
             Card drawnCard = gameState.GetDeck(player).pop();
+            GD.Print("Player " + player.GetPlayerNumber() + " drew " + drawnCard.GetName());
             player.GetHand().Add(drawnCard);
         }
 
@@ -25,8 +26,8 @@ namespace ProcessHandling
         {
             GameState gameState = ProcessHandling.GameHandler.GetGameState();
             Card drawnCard = gameState.GetDeck(player).pop();
+            GD.Print("Player " + player.GetPlayerNumber() + " drew " + drawnCard.GetName());
             player.GetHand().Add(drawnCard);
-            GD.PrintErr("Player " + player.GetPlayerNumber() + " drew " + drawnCard.PrintData());
         }
 
         //probably made obsolete by MoveCard
