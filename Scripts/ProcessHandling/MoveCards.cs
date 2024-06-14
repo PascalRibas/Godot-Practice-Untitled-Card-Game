@@ -37,7 +37,7 @@ namespace UntitledCardGame.Scripts.ProcessHandling
             player.IncrementDiscardCounter();
         }
 
-        public static void DiscardFromField(Card card)
+        public static void SendFromField(Card card)
         {
             Player player = card.GetOwner();
             CardLocation to = player.GetDiscardPile();
