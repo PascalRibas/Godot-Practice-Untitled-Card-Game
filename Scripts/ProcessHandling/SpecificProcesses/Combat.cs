@@ -8,6 +8,7 @@ public class Combat
     ProcessHandling.MoveCards.MoveCard(creature, Pile);
   }
   
+  //Basic Combat System
   public static void Battle (Creature attacker, Creature defender)
   {
     int attack = attacker.GetPower();
