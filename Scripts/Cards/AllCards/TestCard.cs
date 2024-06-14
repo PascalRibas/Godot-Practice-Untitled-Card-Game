@@ -1,5 +1,7 @@
-class TestCard : Creature, OnPlayEffect //extends Creature implements OnPlayEffect
+class TestCard : Card, Creature, OnPlayEffect //extends Card implements Creature and OnPlayEffect
 {
+  public int
+  
   public void primaryEffect()
   {
     UntitledCardGame.Scripts.ProcessHandling.MoveCards.DrawCardFromDeck(Player super.GetOwner());
