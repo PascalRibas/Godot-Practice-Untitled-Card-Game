@@ -6,7 +6,6 @@ using UntitledCardGame.Scripts.Locations;
 public abstract class Card
 {
 	private String name;
-	private String cardType;
 	private PlayCondition playCondition;
 	private OnPlayEffect onPlayEffect;
   private CardLocation currentLocation;
@@ -27,8 +26,8 @@ public abstract class Card
 
 	public String GetCardType()
 	{
-		return this.cardType;
-    }
+	  return "";
+	}
 
     public CardLocation GetCurrentLocation()
     {
