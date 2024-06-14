@@ -8,18 +8,21 @@ namespace UntitledCardGame.Scripts.ProcessHandling
 {
     public class MoveCards
     {
+        //does this one classify as self-commenting
         public static void MoveCard(Card card, CardLocation to)
         {
             CardLocation from = card.GetCurrentLocation();
             from.Remove(card);
             to.Add(card);
         }
+        
         public static void DrawCardFromDeck (Player player, GameState gameState)
         {
             Card drawnCard = gameState.GetDeck(player).pop();
             player.GetHand().Add(drawnCard);
         }
 
+        //probably made obsolete by MoveCard
         public static void DiscardFromHand(Card card)
         {
             Player player = card.GetOwner();
