@@ -64,13 +64,4 @@ namespace Effects.PremadeEffects
             return "";
         }
     }
-
-    class Placeholder
-    {
-        //placeholder function so the program doesn't crash
-        public static Creature AwaitTarget (Player player, CardLocation cardLocation)
-        {
-            return new Creature("NotYetImplemented", new PlayCondition(), new Draw1(), 0);
-        }
-    }
 }

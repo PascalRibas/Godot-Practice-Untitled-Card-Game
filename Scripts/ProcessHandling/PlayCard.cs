@@ -1,6 +1,6 @@
 using MatchNecessities;
+using ProcessHandling;
 
-//only used for one function anymore, TODO move that function elsewhere and delete this
 public class PlayCard
 {
     //check this on every card each time the GameState updates
@@ -25,5 +25,12 @@ public class PlayCard
         }
 
         return true;
+    }
+
+    public static void Play(Card card)
+    {
+        if(card.GetCardType() == "Creature") MoveCards.MoveCard(card, card.GetOwner().GetField());
+        card.ApplyEffect();
+        if(card.GetCardType() == "Spell") MoveCards.MoveCard(card, card.GetOwner().GetDiscardPile());
     }
 }
