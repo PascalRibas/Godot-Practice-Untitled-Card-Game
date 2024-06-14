@@ -24,7 +24,7 @@ namespace ProcessHandling
         
         public static void DrawCardFromDeck (Player player)
         {
-          GameState gameState = 
+          GameState gameState = ProcessHandling.GameHandler.GetGameState();
             Card drawnCard = gameState.GetDeck(player).pop();
             player.GetHand().Add(drawnCard);
         }
