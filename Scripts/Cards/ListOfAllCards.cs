@@ -23,7 +23,21 @@ namespace Cards
           new PlayCondition(),
           //Effect:
           PremadeEffects.Draw1()
-        )
+        ),
+        
+        new Creature
+        (
+          //Name:
+          "TestCreature",
+          //Power:
+          5,
+          //PlayCondition:
+          new PlayCondition(),
+          //Effect:
+          PremadeEffects.Draw1()
+        ),
+        
+        null
       };
     }
 }
