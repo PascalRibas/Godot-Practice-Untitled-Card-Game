@@ -11,8 +11,16 @@ namespace Effects
     
     public static void PopAnyCreature(Player player)
     {
-      Creature target = AwaitTarget(player);
+      CardLocation enemyField = null;//IMPLEMENT LATER
+      Creature target = AwaitTarget(player, enemyField);
       Combat.Destroy(target);
+    }
+    
+    public static void AddCreatureFromDiscarded(Player player)
+    {
+      CardLocation
+      Creature target = AwaitTargetPlayerDiscardPile(player);
+      ProcessHandling.MoveCards.
     }
   }
 }
