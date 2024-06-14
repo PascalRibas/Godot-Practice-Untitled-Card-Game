@@ -1,6 +1,6 @@
 using System;
 using System.Security.Cryptography.X509Certificates;
-using UntitledCardGame.Scripts.Locations;
+using Locations;
 
 //TODO: Just turn this into some kind of effect
 public class PlayCondition

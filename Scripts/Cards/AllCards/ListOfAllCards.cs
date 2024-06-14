@@ -1,7 +1,6 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using Cards.CardTypes;
+using Effects;
 
 namespace Cards
 {
@@ -12,7 +11,8 @@ namespace Cards
     public class ListOfAllCards
     {
       private const List<Card> BaseCards = 
-      {
+      new List<Card>
+      [
         new Creature
         (
           //Name:
@@ -35,9 +35,7 @@ namespace Cards
           new PlayCondition(),
           //Effect:
           PremadeEffects.Draw1()
-        ),
-        
-        null
-      };
+        )
+      ];
     }
 }

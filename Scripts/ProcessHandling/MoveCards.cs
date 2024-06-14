@@ -1,8 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using UntitledCardGame.Scripts.Locations;
+using MatchNecessities;
 
 namespace ProcessHandling
 {
@@ -54,7 +51,7 @@ namespace ProcessHandling
         public static void ManualSacrifice(Card card)
         {
             Player player = card.GetOwner();
-            DiscardFromField(card);
+            SendFromField(card);
             player.IncrementSacrificeCounter();
         }
     }

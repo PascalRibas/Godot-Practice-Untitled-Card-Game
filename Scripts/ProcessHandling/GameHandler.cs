@@ -1,14 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace ProcessHandling
 {
     public class GameHandler
     {
         private static GameState currentGameState;
-        public static void StartMatch(Player You, Player Opponent)
+        public static void StartMatch(MatchNecessities.Player You, MatchNecessities.Player Opponent)
         {
             currentGameState = new GameState();
             currentGameState.StartGame(You, Opponent);

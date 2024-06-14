@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-public partial class Deck : Node, UntitledCardGame.Scripts.Locations.CardLocation
+public partial class Deck : Node, CardLocation
 {
 	private List<Card> deckList = new List<Card>(30);
 	//stuff for later
@@ -48,7 +48,6 @@ public partial class Deck : Node, UntitledCardGame.Scripts.Locations.CardLocatio
 			GD.Print(card.GetName());
 			GD.Print(cardType);
 			if(cardType == "Creature") GD.Print(card.GetPower());
-			else if(cardType == "Spell") GD.Print(card.CheckIfQuickPlay());
 		}
 	}
 

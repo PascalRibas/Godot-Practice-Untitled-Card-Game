@@ -1,11 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using UntitledCardGame.Scripts.ProcessHandling;
+using MatchNecessities;
 
-namespace UntitledCardGame.Scripts
+namespace ProcessHandling
 {
     public class GameState
     {
@@ -84,6 +79,16 @@ namespace UntitledCardGame.Scripts
         public Deck GetDeck(Player player)
         {
             return decks[player.GetPlayerNumber()-1];
+        }
+
+        public Player GetOpponent (Player player)
+        {
+            if (player.Equals(player1))
+            {
+                return player2;
+            }
+
+            return player1;
         }
     }
 }

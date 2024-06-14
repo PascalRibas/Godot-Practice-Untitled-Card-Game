@@ -1,9 +1,8 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using MatchNecessities;
+using Cards;
 
-namespace UntitledCardGame.Scripts.Locations
+namespace Locations
 {
     public class Hand : CardLocation
     {
