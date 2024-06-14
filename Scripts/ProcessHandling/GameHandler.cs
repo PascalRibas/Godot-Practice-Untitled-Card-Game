@@ -14,6 +14,7 @@ namespace UntitledCardGame.Scripts.ProcessHandling
             currentGameState.StartGame(You, Opponent);
         }
         
+        //for server communication down the line
         public static void UpdateGameState(GameState nextGameState)
         {
           currentGameState = nextGameState;
