@@ -6,6 +6,7 @@ public class Combat
   public static void Destroy(Creature creature)
   {
     CardLocation Pile = creature.GetOwner().GetDiscardPile();
+    //animation here
     ProcessHandling.MoveCards.MoveCard(creature, Pile);
   }
   
