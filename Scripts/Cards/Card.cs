@@ -71,7 +71,7 @@ public abstract class Card
 }
 
 //turn into interface? same for Spell
-/*abstract class Creature : Card
+abstract class Creature : Card
 {
 	private int power;
 	public Creature(String name, int power, PlayCondition playCondition, OnPlayEffect onPlayEffect)
