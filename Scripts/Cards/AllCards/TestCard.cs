@@ -1,3 +1,4 @@
+//probably not using this
 class TestCard : Card, Creature, OnPlayEffect //extends Card implements Creature and OnPlayEffect
 {
   public int
