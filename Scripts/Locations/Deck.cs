@@ -5,29 +5,29 @@ using System.Linq;
 
 public partial class Deck : Node, CardLocation
 {
-	private List<Card> deckList = new List<Card>(30);
-	//stuff for later
-	private static Random rng = new Random();
+    private List<Card> deckList = new List<Card>(30);
+    //stuff for later
+    private static Random rng = new Random();
 
-	public Deck(List<Card> deckList)
-	{
-		this.deckList = deckList;
-	}
+    public Deck(List<Card> deckList)
+    {
+        this.deckList = deckList;
+    }
 
-	public static void Shuffle<Card>(List<Card> list)  
-	{
-		int n = list.Count;
-		while (n > 1)
-		{  
-			n--;  
-			int k = rng.Next(n + 1);  
-			Card value = list[k];  
-			list[k] = list[n];  
-			list[n] = value;  
-		}
-	}
+    public static void Shuffle<Card>(List<Card> list)
+    {
+        int n = list.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = rng.Next(n + 1);
+            Card value = list[k];
+            list[k] = list[n];
+            list[n] = value;
+        }
+    }
 
-	/*
+    /*
 	Test Function, TODO move somewhere else
 	public void FillDeck()
 	{
@@ -40,36 +40,36 @@ public partial class Deck : Node, CardLocation
 		}
 	}*/
 
-	public void PrintDeck()
-	{
-		foreach(Card card in deckList)
-		{
-			String cardType = card.GetCardType();
-			GD.Print(card.GetName());
-			GD.Print(cardType);
-			if(cardType == "Creature") GD.Print(card.GetPower());
-		}
-	}
+    public void PrintDeck()
+    {
+        foreach (Card card in deckList)
+        {
+            String cardType = card.GetCardType();
+            GD.Print(card.GetName());
+            GD.Print(cardType);
+            if (cardType == "Creature") GD.Print(card.GetPower());
+        }
+    }
 
-	public List<Card> GetCards()
-	{
-		return deckList;
-	}
+    public List<Card> GetCards()
+    {
+        return deckList;
+    }
 
-	public void Remove (Card card)
-	{
-		this.deckList.Remove(card);
-	}
+    public void Remove(Card card)
+    {
+        this.deckList.Remove(card);
+    }
 
-	public void Add (Card card)
-	{
-		this.deckList.Add(card);
-	}
+    public void Add(Card card)
+    {
+        this.deckList.Add(card);
+    }
 
-	public Card pop ()
-	{
-		Card card = deckList.ElementAt<Card>(0);
-		Remove(card);
-		return card;
-	}
+    public Card pop()
+    {
+        Card card = deckList.ElementAt<Card>(0);
+        Remove(card);
+        return card;
+    }
 }

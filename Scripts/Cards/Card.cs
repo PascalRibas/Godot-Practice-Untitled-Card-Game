@@ -2,6 +2,8 @@ using System;
 using Godot;
 using MatchNecessities;
 using Locations;
+using System.Reflection.Metadata.Ecma335;
+using Effects;
 
 
 public abstract class Card
@@ -9,11 +11,11 @@ public abstract class Card
     private String name;
     private String cardType;
     private PlayCondition playCondition;
-    private OnPlayEffect onPlayEffect;
+    private Effect onPlayEffect;
     private CardLocation currentLocation;
     private Player owner;
 
-    public Card(String name, String cardType, PlayCondition playCondition, OnPlayEffect onPlayEffect)
+    public Card(String name, String cardType, PlayCondition playCondition, Effect onPlayEffect)
     {
         this.name = name;
         this.cardType = cardType;
@@ -28,7 +30,7 @@ public abstract class Card
 
     public String GetCardType()
     {
-    return "";
+        return "";
     }
 
     public CardLocation GetCurrentLocation()
@@ -50,10 +52,10 @@ public abstract class Card
         return playCondition.PrintData();
     }
 
-    public String GetOnPlayEffectInWords()
+    /*public String GetOnPlayEffectInWords()
     {
         return onPlayEffect.EffectInWords();
-    }
+    }*/
 
     public Player GetOwner()
     {
@@ -67,6 +69,6 @@ public abstract class Card
 
     public abstract int GetPower();
 
-    public abstract String PrintData();
+    //public abstract String PrintData();
 
 }

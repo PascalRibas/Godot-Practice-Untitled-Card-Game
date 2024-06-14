@@ -2,36 +2,47 @@ using System;
 using MatchNecessities;
 using ProcessHandling;
 using Cards.CardTypes;
+using Effects;
 
-namespace Effects
+namespace Effects.PremadeEffects
 {
-  public class PremadeEffects
-  {
-    public static void Draw1(Player player)
+    class Draw1 : Effect
     {
-      ProcessHandling.MoveCards.DrawCardFromDeck(player);
+        public void ApplyEffect(Player player)
+        {
+            ProcessHandling.MoveCards.DrawCardFromDeck(player);
+        }
     }
-    
-    public static void PopAnyCreature(Player player)
+
+    class PopAnyCreature : Effect
     {
-      GameState gameState = ProcessHandling.GameHandler.GetGameState();
-      CardLocation enemyField = gameState.GetOpponent(player).GetField();
-      Creature target = AwaitTarget(player, enemyField);
-      Combat.Destroy(target);
+        public void ApplyEffect(Player player)
+        {
+            GameState gameState = ProcessHandling.GameHandler.GetGameState();
+            CardLocation enemyField = gameState.GetOpponent(player).GetField();
+            Creature target = AwaitTarget(player, enemyField);
+            Combat.Destroy(target);
+        }
     }
-    
-    public static void AddCreatureFromDiscarded(Player player)
+
+    class LowerAttackBy : Effect
     {
-      Creature target = AwaitTarget(player,  player.GetDiscardPile());
-      ProcessHandling.MoveCards.MoveCard(target, player.GetHand());
+        public void ApplyEffect(Player player, int amount)
+        {
+            GameState gameState = ProcessHandling.GameHandler.GetGameState();
+            CardLocation enemyField = gameState.GetOpponent(player).GetField();
+            Creature target = AwaitTarget(player, enemyField);
+            target.SetPower(target.GetPower() - amount);
+        }
     }
-    
-    public static void LowerAttackBy (Player player, int amount)
+
+    class AddCreatureFromDiscarded : Effect
     {
-      GameState gameState = ProcessHandling.GameHandler.GetGameState();
-      CardLocation enemyField = gameState.GetOpponent(player).GetField();
-      Creature target = AwaitTarget(player, enemyField);
-      target.SetPower(target.GetPower()-amount);
+        public void ApplyEffect(Player player)
+        {
+            Creature target = AwaitTarget(player, player.GetDiscardPile());
+            ProcessHandling.MoveCards.MoveCard(target, player.GetHand());
+        }
     }
-  }
+
 }

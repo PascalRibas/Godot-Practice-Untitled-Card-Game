@@ -12,14 +12,14 @@ namespace ProcessHandling
         {
             this.player1 = player1;
             this.player2 = player2;
-            decks = new Deck[] {new Deck(player1.GetDeckList()), new Deck(player2.GetDeckList())};
+            decks = new Deck[] { new Deck(player1.GetDeckList()), new Deck(player2.GetDeckList()) };
 
-            for(int i = 0; i < HAND_SIZE; i++)
+            for (int i = 0; i < HAND_SIZE; i++)
             {
                 MoveCards.DrawCardFromDeck(player1, this);
             }
 
-            for(int i = 0; i < HAND_SIZE; i++)
+            for (int i = 0; i < HAND_SIZE; i++)
             {
                 MoveCards.DrawCardFromDeck(player2, this);
             }
@@ -29,7 +29,7 @@ namespace ProcessHandling
         {
             foreach (Card card in player1.GetHand().GetCards())
             {
-                if(PlayCard.IsCardPlayable(card))
+                if (PlayCard.IsCardPlayable(card))
                 {
                     //TODO: Connect to Frontend
                 }
@@ -37,7 +37,7 @@ namespace ProcessHandling
 
             foreach (Card card in player2.GetHand().GetCards())
             {
-                if(PlayCard.IsCardPlayable(card))
+                if (PlayCard.IsCardPlayable(card))
                 {
                     //TODO: Connect to Frontend
                 }
@@ -45,7 +45,7 @@ namespace ProcessHandling
 
             foreach (Card card in player1.GetDiscardPile().GetCards())
             {
-                if(PlayCard.IsCardPlayable(card))
+                if (PlayCard.IsCardPlayable(card))
                 {
                     //TODO: Connect to Frontend
                 }
@@ -53,7 +53,7 @@ namespace ProcessHandling
 
             foreach (Card card in player2.GetDiscardPile().GetCards())
             {
-                if(PlayCard.IsCardPlayable(card))
+                if (PlayCard.IsCardPlayable(card))
                 {
                     //TODO: Connect to Frontend
                 }
@@ -61,7 +61,7 @@ namespace ProcessHandling
 
             foreach (Card card in this.decks[0].GetCards())
             {
-                if(PlayCard.IsCardPlayable(card))
+                if (PlayCard.IsCardPlayable(card))
                 {
                     //TODO: Connect to Frontend
                 }
@@ -69,7 +69,7 @@ namespace ProcessHandling
 
             foreach (Card card in this.decks[1].GetCards())
             {
-                if(PlayCard.IsCardPlayable(card))
+                if (PlayCard.IsCardPlayable(card))
                 {
                     //TODO: Connect to Frontend
                 }
@@ -78,10 +78,10 @@ namespace ProcessHandling
 
         public Deck GetDeck(Player player)
         {
-            return decks[player.GetPlayerNumber()-1];
+            return decks[player.GetPlayerNumber() - 1];
         }
 
-        public Player GetOpponent (Player player)
+        public Player GetOpponent(Player player)
         {
             if (player.Equals(player1))
             {

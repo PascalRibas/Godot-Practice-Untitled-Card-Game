@@ -8,11 +8,12 @@ namespace ProcessHandling
             currentGameState = new GameState();
             currentGameState.StartGame(You, Opponent);
         }
-        
+
         //for server communication down the line
+
         public static void UpdateGameState(GameState nextGameState)
         {
-          currentGameState = nextGameState;
+            currentGameState = nextGameState;
         }
 
         public static GameState GetGameState()

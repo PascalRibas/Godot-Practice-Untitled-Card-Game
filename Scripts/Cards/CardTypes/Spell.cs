@@ -1,14 +1,13 @@
 using System;
+using Effects;
 
 namespace Cards.CardTypes
 {
     public class Spell : Card
     {
-        private bool isQuickPlay;
-        public Spell(String name, bool isQuickPlay, PlayCondition playCondition, OnPlayEffect onPlayEffect)
+        public Spell(String name, PlayCondition playCondition, Effects.Effect onPlayEffect)
         : base(name, "Spell", playCondition, onPlayEffect)
         {
-            this.isQuickPlay = isQuickPlay;
         }
 
         public override int GetPower()
@@ -16,10 +15,10 @@ namespace Cards.CardTypes
             throw new Exception("Can't check power on spell");
         }
 
-        public override String PrintData()
+        /*public override String PrintData()
         {
             return "Card Type: " + GetCardType() + "\n Name: " + GetName() +
             "\n Play Condition: " +  GetPlayConditionInWords() + "\n Effect on Play: " + GetOnPlayEffectInWords();
-        }
+        }*/
     }
 }

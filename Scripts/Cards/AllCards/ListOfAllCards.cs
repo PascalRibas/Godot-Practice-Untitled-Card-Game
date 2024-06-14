@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using Cards.CardTypes;
-using Effects;
+using Effects.PremadeEffects;
 
 namespace Cards
 {
@@ -10,32 +10,30 @@ namespace Cards
     */
     public class ListOfAllCards
     {
-      private const List<Card> BaseCards = 
-      new List<Card>
-      [
-        new Creature
-        (
-          //Name:
-          "TestCreature",
-          //Power:
-          5,
-          //PlayCondition:
-          new PlayCondition(),
-          //Effect:
-          PremadeEffects.Draw1()
-        ),
-        
-        new Spell
-        (
-          //Name:
-          "TestSpell",
-          //IsQuickPlay:
-          false,
-          //PlayCondition:
-          new PlayCondition(),
-          //Effect:
-          PremadeEffects.Draw1()
-        )
-      ];
+        private const List<Card> BaseCards =
+        new List<Card>
+        [
+          new Creature
+          (
+            //Name:
+            "TestCreature",
+            //PlayCondition:
+            new PlayCondition(),
+            //Effect:
+            new Draw1(),
+            //Power:
+            5
+          ),
+
+          new Spell
+          (
+            //Name:
+            "TestSpell",
+            //PlayCondition:
+            new PlayCondition(),
+            //Effect:
+            PremadeEffects.Draw1()
+          )
+        ];
     }
 }

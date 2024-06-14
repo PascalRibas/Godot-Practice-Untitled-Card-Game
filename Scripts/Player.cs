@@ -36,7 +36,7 @@ namespace MatchNecessities
         {
             return this.CurrentSacrificeCounter;
         }
-        
+
         public void SetCurrentDiscardCounter(int NewDiscardCounter)
         {
             this.CurrentDiscardCounter = NewDiscardCounter;

@@ -12,16 +12,18 @@ namespace ProcessHandling
             from.Remove(card);
             to.Add(card);
         }
-        
-        public static void DrawCardFromDeck (Player player, GameState gameState)
+
+
+        public static void DrawCardFromDeck(Player player, GameState gameState)
         {
             Card drawnCard = gameState.GetDeck(player).pop();
             player.GetHand().Add(drawnCard);
         }
-        
-        public static void DrawCardFromDeck (Player player)
+
+
+        public static void DrawCardFromDeck(Player player)
         {
-          GameState gameState = ProcessHandling.GameHandler.GetGameState();
+            GameState gameState = ProcessHandling.GameHandler.GetGameState();
             Card drawnCard = gameState.GetDeck(player).pop();
             player.GetHand().Add(drawnCard);
         }

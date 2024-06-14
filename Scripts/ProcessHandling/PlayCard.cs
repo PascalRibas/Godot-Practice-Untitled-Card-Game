@@ -9,17 +9,17 @@ public class PlayCard
         PlayCondition playCondition = card.GetPlayConditionAsObject();
         Player cardOwner = card.GetOwner();
 
-        if(!(playCondition.getFromWhere() == card.GetCurrentLocation()))
+        if (!(playCondition.getFromWhere() == card.GetCurrentLocation()))
         {
             return false;
         }
 
-        if(!(playCondition.getDiscardCounter() == cardOwner.GetCurrentDiscardCounter()))
+        if (!(playCondition.getDiscardCounter() == cardOwner.GetCurrentDiscardCounter()))
         {
             return false;
         }
 
-        if(!(playCondition.getSacrificeCounter() == cardOwner.GetCurrentSacrificeCounter()))
+        if (!(playCondition.getSacrificeCounter() == cardOwner.GetCurrentSacrificeCounter()))
         {
             return false;
         }
