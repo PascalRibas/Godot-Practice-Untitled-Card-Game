@@ -71,6 +71,7 @@ public abstract class Card
 
 }
 
+//turn into interface? same for Spell
 abstract class Creature : Card
 {
 	private int power;
