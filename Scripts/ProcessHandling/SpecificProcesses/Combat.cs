@@ -33,4 +33,13 @@ public class Combat
   {
     plannedAttacks.Remove(attack);
   }
+  
+  public static void StartCombat()
+  {
+    foreach (Attack attack in plannedAttacks)
+    {
+      //insert Animation here
+      Battle(attack.GetAttacker(), attack.GetDefender());
+    }
+  }
 }
