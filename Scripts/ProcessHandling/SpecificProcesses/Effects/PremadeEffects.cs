@@ -12,7 +12,7 @@ namespace Effects
     public static void PopAnyCreature(Player player)
     {
       Creature target = AwaitTarget(player);
-      ProcessHandling.
+      Combat.Destroy(target);
     }
   }
 }
