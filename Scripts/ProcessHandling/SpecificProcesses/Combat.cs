@@ -48,6 +48,4 @@ public class Combat
       Battle(attack.GetAttacker(), attack.GetDefender());
     }
   }
-  
-  
 }
