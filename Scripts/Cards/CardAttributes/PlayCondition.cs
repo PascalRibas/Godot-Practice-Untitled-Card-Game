@@ -2,6 +2,7 @@ using System;
 using System.Security.Cryptography.X509Certificates;
 using UntitledCardGame.Scripts.Locations;
 
+//TODO: Just turn this into some kind of effect
 public class PlayCondition
 {
 	private CardLocation fromWhere = new Hand();
