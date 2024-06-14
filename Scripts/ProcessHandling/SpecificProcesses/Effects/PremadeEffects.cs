@@ -6,7 +6,7 @@ namespace Effects
   {
     public static void Draw1(Player player)
     {
-      DrawCardFromDeck(player)
+      ProcessHandling.MoveCards.DrawCardFromDeck(player)
     }
   }
 }
