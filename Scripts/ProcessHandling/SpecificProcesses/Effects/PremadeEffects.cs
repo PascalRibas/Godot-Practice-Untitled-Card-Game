@@ -18,9 +18,8 @@ namespace Effects
     
     public static void AddCreatureFromDiscarded(Player player)
     {
-      CardLocation
-      Creature target = AwaitTargetPlayerDiscardPile(player);
-      ProcessHandling.MoveCards.
+      Creature target = AwaitTarget(player,  player.GetDiscardPile());
+      ProcessHandling.MoveCards.MoveCard(target, player.GetHand())
     }
   }
 }
