@@ -11,7 +11,8 @@ namespace Effects
     
     public static void PopAnyCreature(Player player)
     {
-      CardLocation enemyField = null;//IMPLEMENT LATER
+      GameState gameState = ProcessHandling.GameHandler.GetGameState();
+      CardLocation enemyField = gameState.GetOpponent(player).GetField();
       Creature target = AwaitTarget(player, enemyField);
       Combat.Destroy(target);
     }
