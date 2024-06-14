@@ -24,6 +24,12 @@ public class Combat
     }
   }
   
+  public static void PlanAttack(Creature attacker, Creature defender)
+  {
+    Attack attack = new Attack(attacker, defender)
+    PlanAttack(attack);
+  }
+  
   public static void PlanAttack(Attack attack)
   {
     plannedAttacks.Add(attack);
@@ -42,4 +48,6 @@ public class Combat
       Battle(attack.GetAttacker(), attack.GetDefender());
     }
   }
+  
+  
 }
