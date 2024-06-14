@@ -71,7 +71,7 @@ public abstract class Card
 
 }
 
-class Creature : Card
+abstract class Creature : Card
 {
 	private int power;
 	public Creature(String name, int power, PlayCondition playCondition, OnPlayEffect onPlayEffect)
@@ -98,7 +98,7 @@ class Creature : Card
     }
 }
 
-class Spell : Card
+abstract class Spell : Card
 {
 	private bool isQuickPlay;
 	public Spell(String name, bool isQuickPlay, PlayCondition playCondition, OnPlayEffect onPlayEffect)
