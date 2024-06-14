@@ -1,6 +1,7 @@
 //a collection of methods revolving around the combat step
 public class Combat
 {
+  private static List<Attack> plannedAttacks = new List<Attack>();
   //TODO: move to a more appropriately named location
   public static void Destroy(Creature creature)
   {
@@ -22,4 +23,6 @@ public class Combat
       Destroy(attacker);
     }
   }
+  
+  
 }
