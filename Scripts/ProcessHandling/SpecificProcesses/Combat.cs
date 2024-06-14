@@ -29,5 +29,8 @@ public class Combat
     plannedAttacks.Add(attack);
   }
   
-  
+  public static void CancelAttack(Attack attack)
+  {
+    plannedAttacks.Remove(attack);
+  }
 }
