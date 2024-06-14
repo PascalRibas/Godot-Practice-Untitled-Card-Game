@@ -8,10 +8,10 @@ namespace UntitledCardGame.Scripts.ProcessHandling
     public class GameHandler
     {
         private static GameState currentGameState;
-        public static void StartMatch(Player You, Player AI)
+        public static void StartMatch(Player You, Player Opponent)
         {
             currentGameState = new GameState();
-            currentGameState.StartGame(You, AI);
+            currentGameState.StartGame(You, Opponent);
         }
         
         public static void UpdateGameState(GameState nextGameState)
