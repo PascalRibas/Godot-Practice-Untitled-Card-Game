@@ -22,5 +22,10 @@ namespace Effects
       Creature target = AwaitTarget(player,  player.GetDiscardPile());
       ProcessHandling.MoveCards.MoveCard(target, player.GetHand());
     }
+    
+    public static void LowerAttackBy (Player player, int amount)
+    {
+      
+    }
   }
 }
