@@ -20,7 +20,7 @@ namespace Effects
     public static void AddCreatureFromDiscarded(Player player)
     {
       Creature target = AwaitTarget(player,  player.GetDiscardPile());
-      ProcessHandling.MoveCards.MoveCard(target, player.GetHand())
+      ProcessHandling.MoveCards.MoveCard(target, player.GetHand());
     }
   }
 }
