@@ -25,11 +25,11 @@ namespace Cards
           PremadeEffects.Draw1()
         ),
         
-        new Creature
+        new Spell
         (
           //Name:
-          "TestCreature",
-          //Power:
+          "TestSpell",
+          //IsQuickPlay:
           5,
           //PlayCondition:
           new PlayCondition(),
