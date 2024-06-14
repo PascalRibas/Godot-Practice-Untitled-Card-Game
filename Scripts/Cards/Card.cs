@@ -9,8 +9,8 @@ public abstract class Card
 	private String cardType;
 	private PlayCondition playCondition;
 	private OnPlayEffect onPlayEffect;
-    private CardLocation currentLocation;
-    private Player owner;
+  private CardLocation currentLocation;
+  private Player owner;
 
 	public Card(String name, String cardType, PlayCondition playCondition, OnPlayEffect onPlayEffect)
 	{
