@@ -30,7 +30,7 @@ namespace Cards
           //Name:
           "TestSpell",
           //IsQuickPlay:
-          5,
+          false,
           //PlayCondition:
           new PlayCondition(),
           //Effect:
